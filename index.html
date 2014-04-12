@@ -1,0 +1,1062 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="/content_images/article.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script language="javascript">
+function toggle(toggleDiv) {
+var ele = document.getElementById(toggleDiv);
+if(ele.style.display == "block") {
+ele.style.display = "none";
+}
+else {
+ele.style.display = "block";
+}
+} 
+</script>
+<title>Housing by Metro</title>
+<style type="text/css">
+.container {
+	width: 449px;
+*width: 234px;  /* IE 7 and below */
+	height: 400px;
+}
+.R {
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-right: 10px solid #FFFFFF;
+}
+.leftContainer {
+	width: 75px;
+	height: 400px;
+	float: left;
+}
+.rightContainer {
+	width: 150px;
+	height: 408px;
+ *height: 416px; /* IE 7 and below */
+	float: right;
+	background-color: #EEEEEE;
+}
+.contentContainer {
+	width: 270px;
+ *width: 265px;  /* IE 7 and below */
+	height: 408px;
+ *height: 416px;  /* IE 7 and below */
+	color: #000000;
+	background-color: #EEEEEE;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding-right: 10px;
+}
+
+/* img {
+	background-color: #fff;
+	height: 22px;
+	width: 22px; 
+} */
+
+/* @license
+ * MyFonts Webfont Build ID 2456650, 2013-01-22T14:54:54-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Avenir 65 Medium by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/avenir/65-medium/
+ * Copyright: Copyright &#x00A9; 1981 - 2006 Linotype GmbH, www.linotype.com. All rights reserved. Copyright &#x00A9; 1989 - 2002 Adobe Systems Incorporated.  All Rights Reserved.
+ * 
+ * Webfont: Avenir 55 Roman by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/avenir/55-roman/
+ * Copyright: Copyright &#x00A9; 1989, 1995, 2002 Adobe Systems Incorporated.  All Rights Reserved. &#x00A9; 1981, 1995, 2002 Heidelberger Druckmaschinen AG. All rights reserved.
+ * 
+ * Webfont: Avenir 85 Heavy by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/avenir/85-heavy/
+ * Copyright: Copyright &#x00A9; 1989, 1995, 2002 Adobe Systems Incorporated.  All Rights Reserved. &#x00A9; 1981, 1995, 2002 Heidelberger Druckmaschinen AG. All rights reserved.
+ * 
+ * Webfont: Avenir 35 Light by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/avenir/35-light/
+ * Copyright: Copyright &#x00A9; 1989, 1995, 2002 Adobe Systems Incorporated.  All Rights Reserved. &#x00A9; 1981, 1995, 2002 Heidelberger Druckmaschinen AG. All rights reserved.
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2456650
+ * 
+ * © 2013 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/257c4a");
+@import url("//hello.myfonts.net/count/26c1a1");
+@font-face {
+	font-family: 'AvenirLTStd-Medium';
+	src: url('/webfonts/257C4A_0_0.eot');
+	src: url('/webfonts/257C4A_0_0.eot?#iefix') format('embedded-opentype'), url('/webfonts/257C4A_0_0.woff') format('woff'), url('/webfonts/257C4A_0_0.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'AvenirLTStd-Roman';
+	src: url('/webfonts/257C4A_1_0.eot');
+	src: url('/webfonts/257C4A_1_0.eot?#iefix') format('embedded-opentype'), url('/webfonts/257C4A_1_0.woff') format('woff'), url('/webfonts/257C4A_1_0.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'AvenirLTStd-Heavy';
+	src: url('/webfonts/257C4A_2_0.eot');
+	src: url('/webfonts/257C4A_2_0.eot?#iefix') format('embedded-opentype'), url('/webfonts/257C4A_2_0.woff') format('woff'), url('/webfonts/257C4A_2_0.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'AvenirLTStd-Light';
+	src: url('/webfonts/26C1A1_0_0.eot');
+	src: url('/webfonts/26C1A1_0_0.eot?#iefix') format('embedded-opentype'), url('/webfonts/26C1A1_0_0.woff') format('woff'), url('/webfonts/26C1A1_0_0.ttf') format('truetype');
+}
+/* NAVIGATION STYLES */
+
+#box-six, #box-five, #box-four, #box-three, #box-two {
+ display: none;
+}
+#box-one-link {
+	background-color: #FFF;
+	border: 1px solid #000;
+	line-height: 11px;
+	width: 144px;
+	height: 10px;
+}
+#box-two-link {
+	background-color: #1680BC;
+	border: 1px solid #000;
+	line-height: 11px;
+	width: 144px;
+	height: 10px;
+}
+#box-three-link {
+	background-color: #6EAF46;
+	border: 1px solid #000;
+	line-height: 11px;
+	width: 144px;
+	height: 10px;
+}
+#box-four-link {
+	background-color:  #E9292B;
+	border: 1px solid #000;
+	line-height: 11px; 
+	width: 144px;
+	height: 10px;
+}
+#box-five-link {
+	background-color: #FF6600;
+	border: 1px solid #000;
+	line-height: 11px; 
+	width: 144px;
+	height: 10px;
+}
+#box-six-link {
+	background-color: #FFFF00;
+	border: 1px solid #000;
+	line-height: 11px; 
+	width: 144px;
+	height: 10px;
+}
+/* CHALLENGE WEEKS STYLES */
+#week-eight, #week-seven, #week-five, #week-four, #week-three, #week-two, #week-one {
+	display: none;
+	width: 270px;
+	height: 407px;
+}
+#week-one-link, #week-two-link, #week-three-link, #week-four-link, #week-five-link, #week-six-link, #week-seven-link, #week-eight-link {
+	width: 80px;
+	height: 35px;
+	padding-top: 15px;
+	text-align: center;
+	vertical-align: middle;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-variant: small-caps;
+	border-left: thin solid #666666;
+	border-right: thin solid #666666;
+	border-bottom: thin solid #666666;
+}
+#week-one-link {
+	background-color: #1E75BB;
+}
+#week-two-link {
+	background-color: #E27C00;
+}
+#week-three-link {
+	background-color: #E9292B;
+}
+#week-four-link {
+	background-color: #6EAF46;
+}
+#week-five-link {
+	background-color: #6D337F;
+}
+#week-six-link {
+	background-color: #000000;
+}
+#week-seven-link {
+	background-color: #808080; /*#5D5D5D;*/
+}
+#week-eight-link {
+	background-color: #808080; /*#8EABD9;*/
+}
+.tri {
+	background: url(/Content_Images/images/HEBReadySetMoveWeekArrow.png) no-repeat right;
+}
+.tabs {
+list-style: none;
+margin: 0px;
+clear: right;
+padding-left: 0px;
+margin-left: 150px;
+}
+.tabs li {
+	display: inline;
+	text-align: center;
+	font-family: arial;
+}
+.tabs li a {
+	color: #000;
+	color: #FFFFFF\9;  /* IE 8 and below */
+*color: #FFFFFF;  /* IE 7 and below */
+	float: left;
+	display: block;
+	width: 106px;
+	height: 36px;
+	padding: 12px;
+	position: relative;
+	text-decoration: none;
+	vertical-align: middle;
+*text-align: center; /* IE 7 and below */
+	font-weight: bold;
+	font-size: 11px;
+	font-family: arial;
+	text-transform: uppercase;
+}
+.tabs li a:hover {
+	background: url(/Content_Images/images/HEBReadySetMoveTabShadow.png) repeat-x top;
+	color: #595A5C;
+}
+.group:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.box-wrap {
+position: relative;
+min-height: 500px;
+width: 1020px;
+margin: 0 150;
+}
+.tabbed-area div div {
+	position: relative;
+	left: 0px;/*width: 100%;*/
+}
+/*.tabbed-area div div, */.tabs li a {
+	font-family: "AvenirLTStd-Light";/* border: 1px solid #ccc; */
+}
+.active {
+	background: url(/Content_Images/images/HEBReadySetMoveTabShadow.png) repeat-x top;
+	color: #585858;
+}
+/* WEEKS TABS STYLES */
+.tabbed-area-weeks div div {
+	position: relative;
+	left: 0px;/*width: 100%;*/
+}
+/*.tabbed-area-weeks div div, */.tabs-weeks li a {
+	font-family: "AvenirLTStd-Light";/* border: thin solid #666; */
+}
+/* CHALLENGE STYLES */
+
+#RSMWrapper {
+	padding: 0px;
+	margin: 0px;
+	width: 600px;
+}
+#RSMGoMobile {
+	background-color: #DADBDC;
+	padding: 10px;
+	text-align: right;
+}
+#RSMGoMobile a {
+	color: #E92629;
+	text-decoration: none;
+	font-size: 12px;
+	width: 580px;
+	text-align: right;
+}
+#RSMBannerNote {
+background-color: #000;
+padding: 10px;
+width: 1000px;
+height: 20px;
+line-height: 20px;
+margin-left: 150px;
+font-weight: bold;
+}
+#RSMBannerNote .articletext {
+	color: #FFF;
+	font-size: 20px;
+	font-family: arial;
+	margin: 0px;
+}
+#box-one .banner, #box-two .banner, #box-three .banner, #box-four .banner, #box-five .banner {
+	width: 600px;
+}
+#RSMTrainingGuides {
+	background-color: #5D5D5D;
+	position: absolute;
+	margin-top: 215px;
+	z-index: 1000;
+}
+#RSMTrainingGuides .tabs li a {
+	color: #FFF;
+	float: left;
+	display: block;
+	width: 66px;
+	height: 25px;
+	padding: 10px 5px;
+	position: relative;
+	text-decoration: none;
+	vertical-align: middle;
+	font-weight: bold;
+	font-size: 9px;
+	border-left: solid 1px #000000;
+}
+#RSMTrainingGuides .tabs li a:hover {
+	background: none;
+	color: #FFF;
+}
+.RSMInner {
+	background: url(/Content_Images/images/InStrideInnerShadow.png) repeat-y right #EBEBEC;
+	color: #707171;
+	padding: 15px;
+	float: left;
+	width: 190px;
+	height: 600px;
+}
+.RSMTitle {
+	font-size: 24px;
+	font-family: arial;
+	line-height: 22px;
+	color: #1E84BE;
+	margin: 10px 0px;
+}
+.RSMTitleWeeks {
+	margin-top: 20px;
+	font-family: arial;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 36px;
+	color: #1E84BE;
+	width: 600px;
+}
+.RSMInner .RSMTitle {
+	color: #707171;
+	font-family: arial;
+}
+.RSMSubtitle {
+	font-size: 18px;
+	font-family: arial;
+	color: #1E75BB;
+	margin: 10px 0px;
+}
+.RSMInner .RSMSubtitle {
+	color: #707171;
+	font-family: arial;
+}
+.RSMInnerWhite {
+	background-color: #FFF;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.RSMBB3 {
+	border-bottom: solid 4px #FFF;
+}
+.RSMBB1 {
+	border-bottom: solid 1px #FFF;
+}
+.RSMInner .RSMInnerWhite .articletext {
+	color: #5C661F;
+	font-size: 12px;
+	padding: 0px;
+	width: 190px;
+	height: 600px;
+	float: left;
+}
+.RSMInner table {
+	margin-rignt: 20px;
+}
+.RSMInner .articletext, .RSMInner a {
+	color: #585858;
+}
+.RSMInner table .articletext {
+	padding-left: 0px;
+}
+.RSMInner .RSMTitle, .RSMInner .RSMSubtitle, .RSMInner .articletitle, .RSMInner .articlesubtitle, .RSMInner .articletext {
+	font-family: "AvenirLTStd-Light";
+}
+.RSMInner .articletext {
+	font-size: 14px;
+}
+.articletext {
+	color: #666666;
+	font-size: 14px;
+	font-family: arial;
+}
+.articleTextWeeks {
+	color: #666666;
+	font-size: 14px;
+	line-height: 1.8;
+}
+strong {
+	font-family: "AvenirLTStd-Heavy";
+}
+.RSMTable {
+	background-color: #5E5E5E;
+	padding: 10px;
+	border-radius: 10px;
+}
+.RSMTable .articletext {
+	color: #FFF;
+}
+.RSMQ {
+	background-color: #DDDDDD;
+	padding: 5px 10px;
+	color: #E07E26;
+	font-weight: bold;
+}
+.RSMA {
+	padding-left: 20px;
+}
+.RSMLinkBig {
+	color: #666666;
+	font-family: "AvenirLTStd-Light";
+	text-decoration: underline;
+	font-size: 24px;
+}
+.articletitle, .articlesubtitle, .articletext {
+	font-family: "AvenirLTStd-Light";
+}
+.RSMContentHolder {
+	width: 575px;
+	height: 700px;
+	margin-left: 5px; 
+*width: 600px; /*IE 7 and below */
+}
+h2 {
+	font-size: 16px;
+}
+p {
+	font-size: 11px;
+}
+.RSMRegion {
+	display: block;
+	padding: 20px;
+	color: #FFF;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+}
+.slidingDiv {
+	display: none;
+}
+input[type="checkbox"] {
+	width: 0;
+	height: 0;
+	margin: 0;
+	border: 0 none;
+	padding: 0;
+}
+input[type="checkbox"]:before {
+	content: url('/Content_Images/images/HEBReadySetMoveExpand_alt.png');
+	display: block;
+	width: 22px;
+	height: 22px;
+	overflow: hidden;
+}
+input[type="checkbox"]:checked:before {
+	content: url('/Content_Images/images/HEBReadySetMoveCollapse_alt.png');
+}
+.articletext1 {
+	color: #666666;
+	font-size: 14px;
+}
+.articletext1 {
+	font-family: "AvenirLTStd-Light";
+}
+.weeks-table {
+	width: 340px;
+	height: 450px;
+}
+.tripleFloatContainer {
+	width: 600px; 
+	margin-top: 25px;
+}
+.tripleFloatLeft, .tripleFloatMiddle, .tripleFloatRight {
+	float: left; 
+	width: 165px;
+	height: 160px;
+	padding: 0px 15px;
+}
+.tripleFloatLeft, .tripleFloatMiddle {
+	border-right: dashed 1px #000000;
+}
+.tripleFloatTitle {
+	color: #1E75BB;
+	font-size: 12px;
+	font-weight: bold;
+}
+.tripleFloatText {
+	color: #000000;
+	font-size: 12px; 
+	font-weight: normal;
+	display: block;
+	overflow: hidden;
+}
+hr.vertical {
+	width: 1px;
+	background-color: #000;
+	float: right;
+	margin-top: -120px; 
+}
+ul.no-indent {
+padding: 0px;
+margin: 0px;
+list-style-type: none;
+}
+ul.no-indent li:before {
+color: #6DB047;
+content: "\2022";
+font-size: 1em;
+padding-right: 2px;
+position: relative;
+margin-left: 100px;
+}
+ol.no-indent, ol.week {
+padding: 0px;
+margin: 20px;
+list-style-type: none;
+counter-reset: li;
+}
+ol.no-indent, ol.week li:before {
+font-size: 1em;
+font-weight: bold;
+padding-right: 10px;
+position: relative;
+}
+ol.no-indent li:before {
+color: #8CC541;
+content: counter(li) "."; /* Use the counter as content */
+counter-increment: li; /* Increment the counter by 1 */
+padding: 5px;
+}
+ol.week li:before {
+color: #000;
+content: counter(li) "."; /* Use the counter as content */
+counter-increment: li; /* Increment the counter by 1 */
+text-indent: -1em;
+}
+ol.week {
+ list-style: none;
+ padding-left: 2em;
+ text-indent: -2em;
+ }
+.featuresContainer {
+width: 1020px;
+height: 240px;
+/*background-color: #595A5C;*/
+}
+.featuresTitle {
+color: #FFF;
+font-size: 14px;
+font-weight: bold;	
+text-transform: uppercase;
+}
+.featuresText {
+color: #FFF;
+font-size: 12px;
+text-transform: none;
+}
+.prizesContainer {
+width: 550px;
+height: 275px;	
+background-color: #6E3380;
+margin-left: 25px;
+}
+table.features tr {
+	margin-top: 10px;
+}
+a.feature:link, a.feature:visited {
+color: #FFF;	
+text-decoration: none;
+}
+a.feature:hover {
+color: #FBB041;
+}
+.articleTextWeeks {
+	font-family: arial;
+	font-size: 16px;
+	color: #585858;
+}
+.articleTitle {
+font-family: arial;
+font-weight: bold;
+font-size: 26px;
+color: #000;
+}
+</style>
+<script language="javascript">
+function toggle(toggleDiv) {
+var ele = document.getElementById(toggleDiv);
+if(ele.style.display == "block") {
+ele.style.display = "none";
+}
+else {
+ele.style.display = "block";
+}
+} 
+</script>
+<script type="text/javascript">
+function togglediv(div){
+    document.getElementById('box-one').style.display = 'none';
+    document.getElementById('box-one-link').className = '';
+    document.getElementById('box-two').style.display = 'none';
+    document.getElementById('box-two-link').className = '';
+    document.getElementById('box-three').style.display = 'none';
+    document.getElementById('box-three-link').className = '';
+    document.getElementById('box-four').style.display = 'none';
+    document.getElementById('box-four-link').className = '';
+    document.getElementById('box-five').style.display = 'none';
+    document.getElementById('box-five-link').className = '';
+	document.getElementById('box-six').style.display = 'none';
+    document.getElementById('box-six-link').className = '';
+    document.getElementById(div).style.display = 'block';
+    document.getElementById(div+'-link').className = 'active';
+}
+</script>
+<script type="text/javascript">
+function togglediv1(div){
+    document.getElementById('week-one').style.display = 'none';
+    document.getElementById('week-one-link').className = '';
+    document.getElementById('week-two').style.display = 'none';
+    document.getElementById('week-two-link').className = '';
+    document.getElementById('week-three').style.display = 'none';
+    document.getElementById('week-three-link').className = '';
+    document.getElementById('week-four').style.display = 'none';
+    document.getElementById('week-four-link').className = '';
+	document.getElementById('week-five').style.display = 'none';
+    document.getElementById('week-five-link').className = '';
+    document.getElementById('week-six').style.display = 'none';
+    document.getElementById('week-six-link').className = '';
+    /*document.getElementById('week-seven').style.display = 'none';
+    document.getElementById('week-seven-link').className = '';
+    document.getElementById('week-eight').style.display = 'none';
+    document.getElementById('week-eight-link').className = '';*/
+    document.getElementById(div).style.display = 'block';
+    document.getElementById(div+'-link').className = 'tri';
+}
+//Expand and collapse function 
+function expandCollapse() {
+for (var i=0; i<expandCollapse.arguments.length; i++) {
+var element = document.getElementById(expandCollapse.arguments[i]);
+element.style.display = (element.style.display == "none") ? "block" : "none";
+}
+}
+
+//Toggle between plus and minus images for  expand and collapse 
+function loadImage()
+{
+}
+</script>
+</head>
+<body>
+<!-- CHALLENGE PAGE HEADER -->
+
+<div id="RSMWrapper">
+<!--<div id="RSMGoMobile"> <a href="/MemberServices/MobileExperience/MobileEx.aspx" target="_blank">GO MOBILE</a> </div>-->
+<div class="tabbed-area" style="clear: both;">
+  <ul class="tabs group" style="width:1020px;">
+    <li style="line-height: 50%">
+      <div><a id="box-one-link" href="" onClick="togglediv('box-one'); return false">Home</a></div>
+    </li>
+    <li style="line-height: 50%">
+      <div><a id="box-two-link" href="" onClick="togglediv('box-two'); return false">Blue Line</a></div>
+    </li>
+    <li>
+      <div><a id="box-three-link" href="" onClick="togglediv('box-three'); return false">Green Line</a></div>
+    </li>
+    <li>
+      <div><a id="box-four-link" href="" onClick="togglediv('box-four'); return false">Red Line</a></div>
+    </li>
+    <li>
+      <div><a id="box-five-link" href="" onClick="togglediv('box-five'); return false">Orange Line</a></div>
+    </li>
+      <li>
+      <div><a id="box-six-link" href="" onClick="togglediv('box-six'); return false">Yellow Line</a></div>
+    </li>
+  </ul>
+    <div id="RSMBannerNote">
+    <p class="articletext" align="center">No housing? No car? NO PROBLEM!</p>
+  </div>
+  
+  <div id="boxMainWrap">
+    <div class="box-wrap">
+      <div id="box-one">
+        <!--NAV BAR AREA-->
+        <div class="featuresContainer">
+            <div style="width: 300px; float: left">
+             	<img src="metro1.jpg" width="300" height="240" style="border:5px solid #000;"/>
+            </div>
+        	<div style="width: 720px; float: right;">
+        		<img src="metrologo.jpg" width="670" height="215" style="margin-left: 15px; border:15px solid #FFF; outline:#000 solid thick; border:15px solid #FFF; outline:#000 solid thick;"/>
+        	</div>
+        </div>
+         <!--END NAV BAR-->
+        <div style="width: 1020px; height: 700px; margin-top: 20px;">
+           <div style="float:left; margin-top:28px;">
+<img src="metromap.gif" width="600" usemap="#Map" border="0"/>
+<map name="Map">
+  <area shape="circle" coords="82,30,9" href="<a id="box-four-link" href="" onClick="togglediv('box-four'); return false">
+  <area shape="circle" coords="521,438,5" href="<a id="box-four-link" href="" onClick="togglediv('box-three'); return false">
+  <area shape="circle" coords="503,425,4" href="<a id="box-four-link" href="" onClick="togglediv('box-three'); return false">
+  <area shape="circle" coords="486,415,4" href="<a id="box-four-link" href="" onClick="togglediv('box-three'); return false">
+  <area shape="circle" coords="468,414,5" href="<a id="box-four-link" href="" onClick="togglediv('box-three'); return false">
+  <area shape="circle" coords="446,395,3" href="<a id="box-four-link" href="" onClick="togglediv('box-three'); return false">
+  <area shape="circle" coords="436,385,3" href="<a id="box-four-link" href="" onClick="togglediv('box-three'); return false">
+  <area shape="circle" coords="410,374,2" href="<a id="box-four-link" href="" onClick="togglediv('box-three'); return false">
+  <area shape="circle" coords="393,374,2" href="<a id="box-four-link" href="" onClick="togglediv('box-three'); return false">
+  <area shape="circle" coords="372,327,7" href="<a id="box-four-link" href="" onClick="togglediv('box-three'); return false">
+  <area shape="circle" coords="371,302,4" href="<a id="box-four-link" href="" onClick="togglediv('box-three'); return false">
+  <area shape="circle" coords="373,282,10" href="<a id="box-four-link" href="" onClick="togglediv('box-three'); return false">
+  <area shape="circle" coords="370,257,6" href="<a id="box-four-link" href="" onClick="togglediv('box-three'); return false">
+  <area shape="circle" coords="377,230,3" href="<a id="box-four-link" href="" onClick="togglediv('box-three'); return false">
+  <area shape="circle" coords="351,215,3" href="<a id="box-four-link" href="" onClick="togglediv('box-three'); return false">
+  <area shape="circle" coords="334,195,4" href="<a id="box-four-link" href="" onClick="togglediv('box-three'); return false">
+  <area shape="circle" coords="346,172,3" href="<a id="box-four-link" href="" onClick="togglediv('box-three'); return false">
+  <area shape="circle" coords="394,172,10" href="<a id="box-four-link" href="" onClick="togglediv('box-three'); return false">
+  <area shape="circle" coords="412,153,4" href="<a id="box-four-link" href="" onClick="togglediv('box-three'); return false">
+  <area shape="circle" coords="425,137,2" href="<a id="box-four-link" href="" onClick="togglediv('box-three'); return false">
+  <area shape="circle" coords="439,123,3" href="<a id="box-four-link" href="" onClick="togglediv('box-three'); return false">
+  <area shape="circle" coords="456,110,5" href="<a id="box-four-link" href="" onClick="togglediv('box-three'); return false">
+</map>
+<!--<p class="articleTextWeeks" style="margin: 12px 0px; text-decoration: underline;"><a href="/MemberServices/SectionFront.aspx?section=VideoArchiveTest">Click to watch previous videos</a></p>-->
+          </div>
+           <div style="float: right; width: 400px;">
+          <p class="articleTitle">New to D.C.?<br /><br />
+          <p class="articleTextWeeks" style="margin-top: -30px;">Life in one of the most exciting cities in the world. It's  easier, more affordable, and a lot more fun living where you can hop on the  metro - to work, to get to a big event without traffic or parking hassles, and  to meet friends across town.</p>
+          <p class="articleTextWeeks">Find a range of affordable housing options near every DC Metro  station. Just click on each metro line to find a complete listing of available  properties along that corridor, including exact distances from each station and  rental contact information.</p>
+        <p class="articleTextWeeks">Live near the DC Metro. You'll never be far from home.</p>
+<p class="articleTextWeeks" style="font-weight: bold; color: #000;">There are two ways to search for housing: </p>    
+   <ol class="week articleTextWeeks" style="margin-top: 30px; margin-left: -1px;">
+            <li> Click the top tab corresponding with the color Metro line to view rental listings</li>
+            <li> Click on the Metro line on the map to view nearby housing.</li>
+        </ol>
+         </div>
+       </div>
+       </div>
+       <div id="box-two">
+              <!--NAV BAR AREA-->
+        <div class="featuresContainer">
+            <div style="width: 300px; float: left">
+             	<img src="metro1.jpg" width="300" height="240" style="border:5px solid #000;"/>
+            </div>
+        	<div style="width: 720px; float: right;">
+        		<img src="metrologo.jpg" width="670" height="215" style="margin-left: 15px; border:15px solid #FFF; outline:#000 solid thick; border:15px solid #FFF; outline:#000 solid thick;"/>
+        	</div>
+        </div>
+         <!--END NAV BAR-->
+         <p class="articleTitle" style="color: #1680BC;">Blue Line Listings</p>
+       </div>
+      <div id="box-three"> 
+       <!--NAV BAR AREA-->
+        <div class="featuresContainer">
+            <div style="width: 300px; float: left">
+             	<img src="metro1.jpg" width="300" height="240" style="border:5px solid #000;"/>
+            </div>
+        	<div style="width: 720px; float: right;">
+        		<img src="metrologo.jpg" width="670" height="215" style="margin-left: 15px; border:15px solid #FFF; outline:#000 solid thick; border:15px solid #FFF; outline:#000 solid thick;"/>
+        	</div>
+        </div>
+         <!--END NAV BAR-->
+        <p class="articleTitle" style="color: #6EAF46;">Green Line Listings</p>
+        <p class="articleTextWeeks">Branch Avenue to Greenbelt<br/><br/>
+        <span style="font-weight: bold; font-size: 16px;">Branch Avenue</span><a href="javascript:toggle('toggleText1');"> <img src="hebarrow.png" style="width: 20px;"/></a></p>
+        <div id="toggleText1" style="display: none;">
+<table width="200" border="1">
+  <tr>
+   <th style="font-weight: bold;">Property Name</th>
+    <th style="font-weight: bold;">Miles from Metro</th>
+    <th style="font-weight: bold;">Locator Map</th>
+    <th style="font-weight: bold;">Walkability Score</th>
+    <th style="font-weight: bold;">Address</th>
+    <th style="font-weight: bold;">Bedrooms/Bathrooms</th>
+    <th style="font-weight: bold;">Size</th>
+    <th style="font-weight: bold;">Price</th>
+    <th style="font-weight: bold;">Contact</th>
+    <th style="font-weight: bold;">Notes</th>
+  </tr>
+  <tr>
+    <td>MetroPlace at Towne Center</td>
+    <td>.06 miles</td>
+    <td>&nbsp;</td>
+    <td>74</td>
+    <td>4300 Telfair Blvd., Camp Springs, MD, 20746</td>
+    <td>1 BR/1BA</td>
+    <td>869 Sq. Ft.</td>
+    <td>$930/month</td>
+    <td>(301) 523-7463</td>
+    <td>One month security and maintenance deposit required.<br/>
+    Viewings by appointment.
+    </td>
+  </tr>
+  <tr>
+  	<td>Suitland Square Apartments</td>
+    <td>.08 miles</td>
+    <td>&nbsp;</td>
+    <td>83</td>
+    <td>4171 Camp Springs, MD</td>
+    <td>2 BR/1BA</td>
+    <td>930 Sq. Ft.</td>
+    <td>$1050/month</td>
+    <td>www.suitlandsquareapts.com</td>
+    <td>Open House: Sat & Sun, Noon - 5 p.m.</td>
+  </tr>
+   <tr>
+  	<td>Whitehall Square East</td>
+    <td>1.1 miles</td>
+    <td>&nbsp;</td>
+    <td>70</td>
+    <td>4171 Suitland, MD</td>
+    <td>1 BR/1BA</td>
+    <td>850 Sq. Ft.</td>
+    <td>$900/month</td>
+    <td>(301) 773-2234</td>
+    <td>Open House: Sat & Sun, Noon - 5 p.m.</td>
+  </tr>
+</table>
+</div>
+<p class="articleTextWeeks">
+<span style="font-weight: bold; font-size: 16px;">Suitland</span><a href="javascript:toggle('toggleText2');"> <img src="hebarrow.png" style="width: 20px;"/></a></p>
+        <div id="toggleText2" style="display: none;">
+<table width="200" border="1">
+  <tr>
+   <th style="font-weight: bold;">Property Name</th>
+    <th style="font-weight: bold;">Miles from Metro</th>
+    <th style="font-weight: bold;">Locator Map</th>
+    <th style="font-weight: bold;">Walkability Score</th>
+    <th style="font-weight: bold;">Address</th>
+    <th style="font-weight: bold;">Bedrooms/Bathrooms</th>
+    <th style="font-weight: bold;">Size</th>
+    <th style="font-weight: bold;">Price</th>
+    <th style="font-weight: bold;">Contact</th>
+    <th style="font-weight: bold;">Notes</th>
+  </tr>
+  <tr>
+    <td>MetroPlace at Towne Center</td>
+    <td>.06 miles</td>
+    <td>&nbsp;</td>
+    <td>74</td>
+    <td>4300 Telfair Blvd., Camp Springs, MD, 20746</td>
+    <td>1 BR/1BA</td>
+    <td>869 Sq. Ft.</td>
+    <td>$930/month</td>
+    <td>(301) 523-7463</td>
+    <td>One month security and maintenance deposit required.<br/>
+    Viewings by appointment.
+    </td>
+  </tr>
+  <tr>
+  	<td>Suitland Square Apartments</td>
+    <td>.08 miles</td>
+    <td>&nbsp;</td>
+    <td>83</td>
+    <td>4171 Camp Springs, MD</td>
+    <td>2 BR/1BA</td>
+    <td>930 Sq. Ft.</td>
+    <td>$1050/month</td>
+    <td>www.suitlandsquareapts.com</td>
+    <td>Open House: Sat & Sun, Noon - 5 p.m.</td>
+  </tr>
+   <tr>
+  	<td>Whitehall Square East</td>
+    <td>1.1 miles</td>
+    <td>&nbsp;</td>
+    <td>70</td>
+    <td>4171 Suitland, MD</td>
+    <td>1 BR/1BA</td>
+    <td>850 Sq. Ft.</td>
+    <td>$900/month</td>
+    <td>(301) 773-2234</td>
+    <td>Open House: Sat & Sun, Noon - 5 p.m.</td>
+  </tr>
+</table>
+</div>
+<p class="articleTextWeeks">
+<span style="font-weight: bold; font-size: 16px;">Naylor Road</span><a href="javascript:toggle('toggleText3');"> <img src="hebarrow.png" style="width: 20px;"/></a></p>
+        <div id="toggleText3" style="display: none;">
+<table width="200" border="1">
+  <tr>
+   <th style="font-weight: bold;">Property Name</th>
+    <th style="font-weight: bold;">Miles from Metro</th>
+    <th style="font-weight: bold;">Locator Map</th>
+    <th style="font-weight: bold;">Walkability Score</th>
+    <th style="font-weight: bold;">Address</th>
+    <th style="font-weight: bold;">Bedrooms/Bathrooms</th>
+    <th style="font-weight: bold;">Size</th>
+    <th style="font-weight: bold;">Price</th>
+    <th style="font-weight: bold;">Contact</th>
+    <th style="font-weight: bold;">Notes</th>
+  </tr>
+  <tr>
+    <td>MetroPlace at Towne Center</td>
+    <td>.06 miles</td>
+    <td>&nbsp;</td>
+    <td>74</td>
+    <td>4300 Telfair Blvd., Camp Springs, MD, 20746</td>
+    <td>1 BR/1BA</td>
+    <td>869 Sq. Ft.</td>
+    <td>$930/month</td>
+    <td>(301) 523-7463</td>
+    <td>One month security and maintenance deposit required.<br/>
+    Viewings by appointment.
+    </td>
+  </tr>
+  <tr>
+  	<td>Suitland Square Apartments</td>
+    <td>.08 miles</td>
+    <td>&nbsp;</td>
+    <td>83</td>
+    <td>4171 Camp Springs, MD</td>
+    <td>2 BR/1BA</td>
+    <td>930 Sq. Ft.</td>
+    <td>$1050/month</td>
+    <td>www.suitlandsquareapts.com</td>
+    <td>Open House: Sat & Sun, Noon - 5 p.m.</td>
+  </tr>
+   <tr>
+  	<td>Whitehall Square East</td>
+    <td>1.1 miles</td>
+    <td>&nbsp;</td>
+    <td>70</td>
+    <td>4171 Suitland, MD</td>
+    <td>1 BR/1BA</td>
+    <td>850 Sq. Ft.</td>
+    <td>$900/month</td>
+    <td>(301) 773-2234</td>
+    <td>Open House: Sat & Sun, Noon - 5 p.m.</td>
+  </tr>
+</table>
+</div>
+<p class="articleTextWeeks">
+<span style="font-weight: bold; font-size: 16px;">Branch Avenue</span><a href="javascript:toggle('toggleText4');"> <img src="hebarrow.png" style="width: 20px;"/></a></p>
+        <div id="toggleText4" style="display: none;">
+<table width="200" border="1">
+  <tr>
+   <th style="font-weight: bold;">Property Name</th>
+    <th style="font-weight: bold;">Miles from Metro</th>
+    <th style="font-weight: bold;">Locator Map</th>
+    <th style="font-weight: bold;">Walkability Score</th>
+    <th style="font-weight: bold;">Address</th>
+    <th style="font-weight: bold;">Bedrooms/Bathrooms</th>
+    <th style="font-weight: bold;">Size</th>
+    <th style="font-weight: bold;">Price</th>
+    <th style="font-weight: bold;">Contact</th>
+    <th style="font-weight: bold;">Notes</th>
+  </tr>
+  <tr>
+    <td>MetroPlace at Towne Center</td>
+    <td>.06 miles</td>
+    <td>&nbsp;</td>
+    <td>74</td>
+    <td>4300 Telfair Blvd., Camp Springs, MD, 20746</td>
+    <td>1 BR/1BA</td>
+    <td>869 Sq. Ft.</td>
+    <td>$930/month</td>
+    <td>(301) 523-7463</td>
+    <td>One month security and maintenance deposit required.<br/>
+    Viewings by appointment.
+    </td>
+  </tr>
+  <tr>
+  	<td>Suitland Square Apartments</td>
+    <td>.08 miles</td>
+    <td>&nbsp;</td>
+    <td>83</td>
+    <td>4171 Camp Springs, MD</td>
+    <td>2 BR/1BA</td>
+    <td>930 Sq. Ft.</td>
+    <td>$1050/month</td>
+    <td>www.suitlandsquareapts.com</td>
+    <td>Open House: Sat & Sun, Noon - 5 p.m.</td>
+  </tr>
+   <tr>
+  	<td>Whitehall Square East</td>
+    <td>1.1 miles</td>
+    <td>&nbsp;</td>
+    <td>70</td>
+    <td>4171 Suitland, MD</td>
+    <td>1 BR/1BA</td>
+    <td>850 Sq. Ft.</td>
+    <td>$900/month</td>
+    <td>(301) 773-2234</td>
+    <td>Open House: Sat & Sun, Noon - 5 p.m.</td>
+  </tr>
+</table>
+</div>
+
+      </div>
+      <div id="box-four"> 
+  <!--NAV BAR AREA-->
+        <div class="featuresContainer">
+            <div style="width: 300px; float: left">
+             	<img src="metro1.jpg" width="300" height="240" style="border:5px solid #000;"/>
+            </div>
+        	<div style="width: 720px; float: right;">
+        		<img src="metrologo.jpg" width="670" height="215" style="margin-left: 15px; border:15px solid #FFF; outline:#000 solid thick; border:15px solid #FFF; outline:#000 solid thick;"/>
+        	</div>
+        </div>
+         <!--END NAV BAR-->
+      <p class="articleTitle" style="color: #EB292E;">Red Line Listings</p>
+      </div>
+   <div id="box-five"> 
+ <!--NAV BAR AREA-->
+        <div class="featuresContainer">
+            <div style="width: 300px; float: left">
+             	<img src="metro1.jpg" width="300" height="240" style="border:5px solid #000;"/>
+            </div>
+        	<div style="width: 720px; float: right;">
+        		<img src="metrologo.jpg" width="670" height="215" style="margin-left: 15px; border:15px solid #FFF; outline:#000 solid thick; border:15px solid #FFF; outline:#000 solid thick;"/>
+        	</div>
+        </div>
+         <!--END NAV BAR-->
+            <p class="articleTitle" style="color: #FF6600;">Orange Line Listings</p>
+      </div>
+          <div id="box-six">  
+      <!--NAV BAR AREA-->
+        <div class="featuresContainer">
+            <div style="width: 300px; float: left">
+             	<img src="metro1.jpg" width="300" height="240" style="border:5px solid #000;"/>
+            </div>
+        	<div style="width: 720px; float: right;">
+        		<img src="metrologo.jpg" width="670" height="215" style="margin-left: 15px; border:15px solid #FFF; outline:#000 solid thick; border:15px solid #FFF; outline:#000 solid thick;"/>
+        	</div>
+        </div>
+         <!--END NAV BAR-->
+       <p class="articleTitle" style="color: #FFFF00;">Yellow Line Listings</p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
